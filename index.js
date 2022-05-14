@@ -13,15 +13,3 @@ const client = new Client({
 module.exports = client;
 // console.log(client.commands);
 client.login(process.env.token)
-
-
-const express = require('express');
-const { InteractionType, InteractionResponseType, verifyKeyMiddleware } = require('discord-interactions');
-
-const app = express();
-
-app.post('/interactions', verifyKeyMiddleware(process.env.CLIENT_PUBLIC_KEY), (req, res) => {
-   const interaction = req.body;
-   console.log(interaction)
-});
-app.listen(3000)
