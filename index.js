@@ -24,9 +24,37 @@ app.post('/interactions', verifyKeyMiddleware(process.env.CLIENT_PUBLIC_KEY), (r
   const interaction = req.body;
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     res.send({
-      type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+      type: InteractionResponseType.APPLICATION_MODAL,
       data: {
-        content: 'Hello world',
+        title: 'Test',
+        custom_id: 'test-modal',
+        components: [
+          {
+            type: 1,
+            components: [
+              {
+                type: 4,
+                style: 1,
+                label: 'Short Input',
+                custom_id: 'short-input',
+                placeholder: 'Short Input',
+              },
+            ],
+          },
+          {
+            type: 1,
+            components: [
+              {
+                type: 4,
+                style: 1,
+                label: 'Paragraph Input',
+                custom_id: 'paragraph-input',
+                placeholder: 'Paragraph Input',
+                required: false,
+              },
+            ],
+          },
+        ],
       },
     });
   }
