@@ -10,4 +10,6 @@ const client = new Client({
     ]
 })
 
+module.exports = client;
+
 client.login(process.env.token)
