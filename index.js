@@ -31,3 +31,4 @@ app.post('/interactions', verifyKeyMiddleware(process.env.CLIENT_PUBLIC_KEY), (r
     });
   }
 });
+app.listen(3000)
