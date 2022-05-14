@@ -12,7 +12,7 @@ module.exports = class extends Client {
         this.loadEvents()
     }
      registryCommands() {
-        this.guilds.cache.get(process.env.guild_id).commands.set(this.commands)
+        require ('./SlashCommands')
     }
     loadCommands(path = 'src/commands') {
         const categories = readdirSync(path)
