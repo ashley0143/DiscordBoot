@@ -11,7 +11,9 @@ module.exports = class extends Client {
         this.loadCommands()
         this.loadEvents()
     }
-     registryCommands() {equir    }
+    registryCommands() {
+     this.application.commands.set(this.commands)
+    }
     loadCommands(path = 'src/commands') {
         const categories = readdirSync(path)
 
