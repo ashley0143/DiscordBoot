@@ -7,3 +7,5 @@ class Command {
         this.requireDatabase = options.requireDatabase
     }
 }
+
+module.exports = Command;
