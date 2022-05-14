@@ -12,6 +12,7 @@ module.exports = class extends Client {
         this.loadEvents()
     }
     registryCommands() {
+             this.guilds.cache.get(process.env.guild_id).commands.set(this.commands)
      this.application.commands.set(this.commands)
     }
     loadCommands(path = 'src/commands') {
