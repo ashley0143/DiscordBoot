@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 module.exports = class extends Command {
     constructor(client) {
         super(client, {
-            name: 'ping',
-            description: 'Mostra o ping do bot.'
+            name: 'modal',
+            description: 'test modal'
         })
     }
     run = (interaction) => {
