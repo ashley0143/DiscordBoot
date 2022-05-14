@@ -21,10 +21,7 @@ const { InteractionType, InteractionResponseType, verifyKeyMiddleware } = requir
 const app = express();
 
 app.post('/interactions', verifyKeyMiddleware(process.env.CLIENT_PUBLIC_KEY), (req, res) => {
-  const interaction = req.console.log(interaction)      },
-        ],
-      },
-    });
-  }
+   const interaction = req.body;
+   console.log(interaction)
 });
 app.listen(3000)
