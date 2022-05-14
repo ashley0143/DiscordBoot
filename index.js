@@ -11,5 +11,5 @@ const client = new Client({
 })
 
 module.exports = client;
-
+// console.log(client.commands);
 client.login(process.env.token)

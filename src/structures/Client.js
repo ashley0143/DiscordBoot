@@ -11,9 +11,7 @@ module.exports = class extends Client {
         this.loadCommands()
         this.loadEvents()
     }
-     registryCommands() {
-        require ('./SlashCommands')
-    }
+     registryCommands() {equir    }
     loadCommands(path = 'src/commands') {
         const categories = readdirSync(path)
 
