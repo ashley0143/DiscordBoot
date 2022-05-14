@@ -16,7 +16,7 @@ client.login(process.env.token)
 
 
 const express = require('express');
-const { InteractionType, InteractionResponseType, verifyKeyMiddleware } = requirdiscord-interactions')');
+const { InteractionType, InteractionResponseType, verifyKeyMiddleware } = require('discord-interactions');
 
 const app = express();
 
