@@ -11,7 +11,7 @@ module.exports = class extends Command {
         console.log(this.client.commands)
         interaction.reply({
             content: `Atual ping de Ayu é \`${this.client.ws.ping}\`ms.`,
-            ephemeral: true
+            flags: "URGENT"
         })
     }
 }
