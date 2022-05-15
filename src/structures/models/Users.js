@@ -1,3 +1,5 @@
+const mongo = require('mongoose');
+
 const Schema = mongo.Schema;
 
 const User = new Schema({
