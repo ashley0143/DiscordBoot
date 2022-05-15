@@ -30,7 +30,7 @@ module.exports = class extends Command {
       if (!user.permissions.has(Permissions.FLAGS.MODERATE_MEMBERS)) return interaction.reply({content: `[ERRO] Você não pode usar esse comando apenas ADMINs e usuarios com permissão \`\`MODERATE_MEMBERS\`\`!`, ephemeral:true});
       if (!interaction.guild.me.permissions.has(Permissions.FLAGS.MODERATE_MEMBERS)) return interaction.reply({ content: `[ERRO] Eu não posso executar esse comando pois não tenho permissão \`\`MODERATE_MEMBERS\`\`!`, ephemeral: true });
       const tempo = ms(interaction.options.getString("time"));
-      
+      const time = new Date(Date.now() + tempo);
       if(!member) return interaction.reply("[ERRO] Não consegui achar o usuário, verifique se está tudo correto.", {ephemeral:true});
       if(user.id === member.id) return message.reply("Não posso te silenciar");
       if(!tempo) return interaction.reply("[ERRO] Coloque um tempo válido!", {ephemeral:true});
