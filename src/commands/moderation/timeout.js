@@ -37,6 +37,9 @@ module.exports = class extends Command {
       member.timeout(tempo, "Requested by: " + user.username).then(inter => {
        interaction.reply(`:mute: | ${member.user.username} foi silenciado!\n:rolling_eyes: | Motivo: ${text}\n:timer: | Será retirado <t:${Math.floor(time.getTime() / 1000)}:R>`);
       }).catch(err => {
+
+       console.error(err)
+
        interaction.reply(`[ERRO] Não consegui silenciar o usuario.`, {ephemeral:true})
       })
     }
