@@ -6,13 +6,12 @@ const { join } = require('path')
 module.exports = class extends Client {
     constructor(options) {
         super(options)
-
         this.commands = []
         this.loadCommands()
         this.loadEvents()
     }
     registryCommands() {
-             this.guilds.cache.get(process.env.guild_id).commands.set(this.commands)
+     this.guilds.cache.get(process.env.guild_id).commands.set(this.commands)
      this.application.commands.set(this.commands)
     }
     loadCommands(path = 'src/commands') {
