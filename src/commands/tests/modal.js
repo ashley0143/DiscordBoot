@@ -11,6 +11,6 @@ module.exports = class extends Command {
      const modal = new Discord.Modal()
       .setTitle("Test Modal")
       .setCustomId("1");
-      interaction.reply({content: "Test", components: [row]})
+      interaction.reply({content: "Test", components: [modal]})
     }
 }
