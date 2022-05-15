@@ -11,6 +11,6 @@ module.exports = class extends Command {
     run = async function(interaction) {
         const user = await Users.findOne({_id: interaction.member.id});
         if(!user) return interaction.reply("[Erro] Usuário não existe.");
-        message.reply(`$${user.economy.coins}`)
+        interaction.reply(`$${user.economy.coins}`)
    }
 }
