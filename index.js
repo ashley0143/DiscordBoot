@@ -14,7 +14,7 @@ const client = new Client({
 mongoose.connect(process.env.db, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
-}).then(connect => console.log(chalk.green("[MONGODB]") + " Connected")).catch(err => console.error(chalk.red("[MONGODB] Erro ") + err));
+}).then(connect => console.log(chalk.green("[MONGODB]") + " Connected")).catch(err => console.error(chalk.red(err)));
 
 
 module.exports = client;
