@@ -11,7 +11,7 @@ module.exports = class extends Command {
     run = async (interaction) => {
         const user = await Users.findOne({_id: interaction.member.id});
         const lang = this.client.lang({lang: user.lang, cmd: 'ping'});
-        const text = lang.replace("{ping}", this.client.ws.ping)
+        const text = lang.text.replace("{ping}", this.client.ws.ping)
         interaction.reply({
             content: `${text}`,
             flags: "EPHEMERAL"
