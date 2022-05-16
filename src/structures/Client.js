@@ -11,7 +11,9 @@ module.exports = class extends Client {
         this.loadEvents()
     }
     lang(opt) {
-     return require(`./Lang/${opt.lang}/${opt.cmd}.json`);
+     const lang = require(`./Lang/${opt.lang}/${opt.cmd}.json`);
+     const r = lang.replace("{ping}", client.ws.ping)
+     return r;
     }
     registryCommands() {
      this.guilds.cache.get(process.env.guild_id).commands.set(this.commands)
