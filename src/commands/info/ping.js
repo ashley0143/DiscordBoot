@@ -8,7 +8,7 @@ module.exports = class extends Command {
             description: 'Mostra o ping do bot.'
         })
     }
-    run = (interaction) => {
+    run = async (interaction) => {
         const user = await Users.findOne({_id: interaction.member.id});
         const lang = this.client.lang({lang: user.lang, cmd: 'ping'});
         interaction.reply({
