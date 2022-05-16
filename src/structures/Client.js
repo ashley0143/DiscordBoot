@@ -12,8 +12,7 @@ module.exports = class extends Client {
     }
     lang(opt) {
      const lang = require(`./Lang/${opt.lang}/${opt.cmd}.json`);
-     const r = lang.replace("{ping}", super.ws.ping)
-     return r;
+     return lang;
     }
     registryCommands() {
      this.guilds.cache.get(process.env.guild_id).commands.set(this.commands)
