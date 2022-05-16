@@ -12,7 +12,7 @@ module.exports = class extends Client {
     }
     lang(opt) {
      const lang = require(`./Lang/${opt.lang}/${opt.cmd}.json`);
-     const r = lang.replace("{ping}", client.ws.ping)
+     const r = lang.replace("{ping}", super.ws.ping)
      return r;
     }
     registryCommands() {
