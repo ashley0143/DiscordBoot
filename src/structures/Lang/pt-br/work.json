@@ -1,0 +1,5 @@
+{
+ "text":"👷 • Você trabalhou e conseguiu ${money}!",
+ "error": "[Erro] Usuário não existe.",
+ "cooldown": "😪 • Uff, você trabalhou muito, porque não descansa um pouco?"
+}
