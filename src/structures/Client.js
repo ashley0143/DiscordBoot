@@ -10,6 +10,9 @@ module.exports = class extends Client {
         this.loadCommands()
         this.loadEvents()
     }
+    lang(l, cmd) {
+     return require(`./Lang/${l}/${cmd}.json`);
+    }
     registryCommands() {
      this.guilds.cache.get(process.env.guild_id).commands.set(this.commands)
      this.application.commands.set(this.commands)
