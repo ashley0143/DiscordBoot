@@ -1,0 +1,8 @@
+{
+ "text":  ":mute: | {member} has been silenced!\n:timer: | <t:{timer}:R> will be removed",
+ "error": "[ERROR] You cannot use this command only ADMINs and users with ``MODERATE_MEMBERS`` permission!",
+ "error2":"[ERROR] I can't execute this command because I don't have ``MODERATE_MEMBERS`` permission!",
+ "error3":"[ERROR] I couldn't find the user, check if everything is correct.",
+ "error4":"[ERROR] I can't timeout you",
+ "error5":"[ERROR] Enter a valid time!"
+}
