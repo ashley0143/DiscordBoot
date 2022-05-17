@@ -11,12 +11,14 @@ module.exports = class extends Command {
     }
     run = async function(interaction) {
         const user = await Users.findOne({_id: interaction.member.id});
-        if(!user) return interaction.reply("[Erro] Usuário não existe.");
-        if(cooldown.has(interaction.user.id)) return interaction.reply({content:"😪 • Uff, você trabalhou muito, porque não descansa um pouco?", type: 'EPHEMERAL'});
+        const lang = this.client.lang({lang: user.lang || "pt-br", cmd: 'work'});
+        if(!user) return interaction.reply(lang.error);
+        var success = lang.text.replace("{money}", user.economy.coins)
+        if(cooldown.has(interaction.user.id)) return interaction.reply({content:lang.cooldown, type: 'EPHEMERAL'});
         var random = Math.floor(Math.random(500) * 50000)
         user.economy.coins += random;
         user.save();
-        interaction.reply(`👷 • Você trabalhou e conseguiu $${random}!`)
+        interaction.reply(success)
         cooldown.add(interaction.user.id);
         setTimeout(() => {
           cooldown.delete(interaction.user.id);
