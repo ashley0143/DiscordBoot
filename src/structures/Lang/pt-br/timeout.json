@@ -1,0 +1,8 @@
+{
+ "text":  ":mute: | {member} foi silenciado!\n:timer: | Será retirado <t:{timer}:R>",
+ "error": "[ERRO] Você não pode usar esse comando apenas ADMINs e usuarios com permissão ``MODERATE_MEMBERS``!",
+ "error2":"[ERRO] Eu não posso executar esse comando pois não tenho permissão ``MODERATE_MEMBERS``!",
+ "error3":"[ERRO] Não consegui achar o usuário, verifique se está tudo correto.",
+ "error4":"[ERRO] Não posso te silenciar",
+ "error5":"[ERRO] Coloque um tempo válido!"
+}
