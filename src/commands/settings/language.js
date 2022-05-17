@@ -18,7 +18,7 @@ module.exports = class extends Command {
     }
     run = async (interaction) => {
         const user = await Users.findOne({_id: interaction.member.id});
-        user.lang = interaction.options.getString('lang');
+        user.lang = interaction.options.getString('language');
         user.save()
         const lang = this.client.lang({lang: user.lang, cmd: 'language'})
         interaction.reply(lang.text)
